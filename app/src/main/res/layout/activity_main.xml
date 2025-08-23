@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_herbb"
+    tools:context=".MainActivity">
+
+    <!-- Judul & Subjudul -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HerbID (Herbal Identification)"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tvWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp" />
+
+    <!-- Instruksi -->
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ketuk untuk mengidentifikasi\nPilih dari Galeri atau Kamera untuk Memindai"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tvSub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- Tombol Pindai & Galeri -->
+    <LinearLayout
+        android:id="@+id/buttonSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/tvInstruction"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Pindai"
+            android:drawableTop="@android:drawable/ic_menu_camera"
+            android:padding="12dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Galeri"
+            android:drawableTop="@android:drawable/ic_menu_gallery"
+            android:padding="12dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Tombol Navigasi Dashboard & Tentang -->
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/btnDashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dashboard"
+            android:drawableTop="@android:drawable/ic_menu_view"
+            android:backgroundTint="#A5D6A7"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tentang"
+            android:drawableTop="@android:drawable/ic_menu_info_details"
+            android:backgroundTint="#A5D6A7"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mengenal Alam, Membangun Kesehatan: Aplikasi Herb Identifier.\n\nSelamat datang di Herb Identifier, aplikasi inovatif yang menjadi jembatan Anda menuju kekayaan alam Indonesia. Kami hadir untuk memudahkan Anda dalam mengidentifikasi berbagai daun herbal, hanya dengan sekali jepret atau pilih dari galeri. Didukung oleh teknologi kecerdasan buatan TensorFlow Lite yang canggih dan dibangun dengan fondasi Java yang kokoh, Herb Identifier tidak hanya memberikan nama, tetapi juga definisi dan manfaat mendalam dari setiap daun. Mari bersama kami mengenal herbal, melestarikan alam, dan menggali kearifan tradisional untuk kesehatan yang lebih baik. &amp; Java.\n\n© 2025 by faqih"/>
+</ScrollView>

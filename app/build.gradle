@@ -1,0 +1,88 @@
+// Letakkan blok 'configurations.all' ini di bagian paling atas file,
+// di luar blok 'android { ... }' dan 'dependencies { ... }'.
+// Ini adalah solusi utama untuk 'Duplicate class Kotlin'.
+configurations.all {
+    resolutionStrategy {
+        // Memaksa semua dependensi untuk menggunakan versi Kotlin StdLib yang lebih baru ini.
+        // Kita memilih 1.8.10 karena itu adalah versi yang lebih tinggi yang ditemukan di log konflik.
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.10'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.example.herbidentifier'
+    compileSdkVersion 33 // Anda ingin tetap di API 33
+
+    defaultConfig {
+        applicationId "com.example.herbidentifier"
+        minSdkVersion 26
+        targetSdkVersion 33 // Pastikan targetSdkVersion juga 33
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        aaptOptions {
+            noCompress "tflite"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // UI & Layout
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // Versi Material Design 1.9.0 kemungkinan besar butuh compileSdk 34+.
+    // Kita turunkan ke versi 1.8.0 yang lebih mungkin kompatibel dengan API 33.
+    implementation 'com.google.android.material:material:1.8.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Image Picker (kamera & galeri)
+    // Versi ini (2.1) mungkin menarik dependensi Kotlin yang lebih lama.
+    // Metode 'force' di atas seharusnya menangani ini, tapi awasi jika masih ada masalah.
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+    // TensorFlow Lite
+    // Sama seperti Image Picker, mungkin menarik dependensi yang berkonflik.
+    // Metode 'force' di atas seharusnya menangani ini.
+    implementation 'org.tensorflow:tensorflow-lite:2.12.0'
+
+    // Dependensi 'activity' yang sebelumnya 'libs.activity'.
+    // Saya asumsikan ini merujuk ke 'androidx.activity:activity'.
+    // Kita gunakan versi yang kompatibel dengan API 33 (berdasarkan rekomendasi sebelumnya).
+    implementation 'androidx.activity:activity:1.7.2'
+
+    // Tambahan: Dependensi 'core' dan 'annotation-experimental' yang sering menyebabkan peringatan
+    // karena butuh API lebih tinggi dari 33. Kita turunkan versinya.
+    implementation 'androidx.core:core:1.10.1' // Versi yang kompatibel dengan API 33
+    implementation 'androidx.core:core-ktx:1.10.1' // Versi yang kompatibel dengan API 33
+    implementation 'androidx.annotation:annotation-experimental:1.3.0' // Versi yang kompatibel dengan API 33
+    implementation 'androidx.profileinstaller:profileinstaller:1.3.1' // Versi yang kompatibel dengan API 33
+    // 'core-viewtree' biasanya ditarik oleh 'core', jadi mungkin tidak perlu dideklarasikan secara eksplisit.
+    // Jika masih ada peringatan tentang 'core-viewtree' setelah ini, coba tambahkan:
+    // implementation 'androidx.core:core-viewtree:1.0.0'
+}
