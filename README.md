@@ -1,19 +1,40 @@
+<img width="1080" height="1920" alt="Desain tanpa judul" src="https://github.com/user-attachments/assets/c1851e23-d347-4b5e-b18c-13e2527c27d7" />
 <figure>
-  <!-- Menampilkan Gambar -->
-  <img src="ss%20an%20prototip/SS%20AN%20BUAT%20PI/SS%20AN/ss%20an%20aplikasi%20buat%20bab%204/Desain%20tanpa%20judul.jpg" alt="Antarmuka Aplikasi Android Herb Identifier Berbasis Deep Learning" width="100%">
   
-  <!-- Deskripsi Lanjutan (Extended Description) -->
   <figcaption>
-    <details>
-      <summary><b>Lihat Deskripsi Lanjutan (Extended Description)</b></summary>
+    <details open>
+      <summary><b>Deskripsi & Keterangan Antarmuka Aplikasi</b></summary>
+      <br>
       <p>
-        Gambar di atas menampilkan 4 panel utama dari antarmuka aplikasi Android <b>Herb Identifier</b> yang ditenagai oleh model <i>deep learning</i> (TensorFlow Lite):
+        Tangkapan layar di atas menampilkan 4 alur utama dari antarmuka aplikasi Android <b>Herb Identifier</b> yang mengimplementasikan model <i>deep learning</i> (TensorFlow Lite):
       </p>
       <ul>
-        <li><b>Panel Kiri Atas (Logo/Splash Screen):</b> Menampilkan ikon aplikasi berupa ilustrasi daun hijau dengan matahari terbit di tengahnya sebagai identitas visual utama.</li>
-        <li><b>Panel Kanan Atas (Halaman Beranda / Home):</b> Menampilkan antarmuka utama dengan dua tombol aksi interaktif, yaitu <b>PINDAI</b> (menggunakan kamera) dan <b>GALERI</b> (mengunggah foto), serta navigasi bottom bar ("Dashboard" dan "Tentang").</li>
-        <li><b>Panel Kiri Bawah (Halaman Hasil Klasifikasi):</b> Menampilkan hasil prediksi model <i>deep learning</i> setelah foto diproses (contoh: <i>Daun Sirih</i> dengan tingkat keyakinan <b>99,77%</b>), lengkap dengan deskripsi botani dan manfaatnya.</li>
-        <li><b>Panel Kanan Bawah (Halaman Tentang / About):</b> Berisi informasi latar belakang pengembangan aplikasi berbasis <b>Java</b> dan <b>TensorFlow Lite</b> untuk klasifikasi tanaman secara <i>on-device</i>, serta informasi hak cipta (© 2025 by faqih).</li>
+        <li>
+          <b>1. Splash Screen / Logo (Kiri Atas):</b><br>
+          Menampilkan logo identitas visual aplikasi berupa ikon daun hijau dan simbol matahari terbit di tengahnya.
+        </li>
+        <li>
+          <b>2. Halaman Utama / Home (Kanan Atas):</b><br>
+          Menampilkan tombol navigasi utama:
+          <ul>
+            <li><b>PINDAI:</b> Membuka kamera untuk mengambil foto daun secara langsung.</li>
+            <li><b>GALERI:</b> Memilih gambar daun yang sudah tersimpan di penyimpanan HP.</li>
+            <li>Bottom bar navigasi menuju <b>Dashboard</b> dan <b>Tentang</b>.</li>
+          </ul>
+        </li>
+        <li>
+          <b>3. Halaman Hasil Klasifikasi (Kiri Bawah):</b><br>
+          Menampilkan luaran (inference) dari model deep learning setelah memproses foto:
+          <ul>
+            <li><b>Jenis Daun:</b> Daun Sirih (<i>Piper betle</i>)</li>
+            <li><b>Akurasi/Persentase:</b> 99,77%</li>
+            <li><b>Deskripsi & Manfaat:</b> Penjelasan ilmiah mengenai definisi tanaman, sifat antiseptik, serta khasiatnya.</li>
+          </ul>
+        </li>
+        <li>
+          <b>4. Halaman Tentang / About (Kanan Bawah):</b><br>
+          Menjelaskan latar belakang aplikasi yang dikembangkan menggunakan bahasa pemrograman <b>Java</b> dan pustaka <b>TensorFlow Lite</b> untuk pemrosesan klasifikasi secara <i>on-device</i> tanpa membutuhkan koneksi internet.
+        </li>
       </ul>
     </details>
   </figcaption>
