@@ -1,6 +1,5 @@
-<img width="1080" height="1920" alt="Desain tanpa judul" src="https://github.com/user-attachments/assets/c1851e23-d347-4b5e-b18c-13e2527c27d7" />
+<img width="400" alt="Desain tanpa judul" src="https://github.com/user-attachments/assets/c1851e23-d347-4b5e-b18c-13e2527c27d7" />
 <figure>
-  
   <figcaption>
     <details open>
       <summary><b>Deskripsi & Keterangan Antarmuka Aplikasi</b></summary>
